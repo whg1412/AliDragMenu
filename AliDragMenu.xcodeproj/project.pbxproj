@@ -1,0 +1,559 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9FACCBCA1E55397100629935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCBC91E55397100629935 /* AppDelegate.swift */; };
+		9FACCBCC1E55397100629935 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCBCB1E55397100629935 /* ViewController.swift */; };
+		9FACCBCF1E55397100629935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FACCBCD1E55397100629935 /* Main.storyboard */; };
+		9FACCBD11E55397100629935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FACCBD01E55397100629935 /* Assets.xcassets */; };
+		9FACCBD41E55397100629935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FACCBD21E55397100629935 /* LaunchScreen.storyboard */; };
+		9FACCBDF1E55397100629935 /* AliDragMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCBDE1E55397100629935 /* AliDragMenuTests.swift */; };
+		9FACCBEA1E55397100629935 /* AliDragMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCBE91E55397100629935 /* AliDragMenuUITests.swift */; };
+		9FACCBF91E553D3800629935 /* NumberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCBF71E553D3800629935 /* NumberCollectionViewCell.swift */; };
+		9FACCBFA1E553D3800629935 /* NumberCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FACCBF81E553D3800629935 /* NumberCollectionViewCell.xib */; };
+		9FACCBFC1E5559AB00629935 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCBFB1E5559AB00629935 /* MenuView.swift */; };
+		9FACCBFE1E555B9300629935 /* IconAndTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCBFD1E555B9300629935 /* IconAndTitleView.swift */; };
+		9FACCC001E555B9E00629935 /* IconAndTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FACCBFF1E555B9E00629935 /* IconAndTitleView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9FACCBDB1E55397100629935 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FACCBBE1E55397100629935 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FACCBC51E55397100629935;
+			remoteInfo = AliDragMenu;
+		};
+		9FACCBE61E55397100629935 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9FACCBBE1E55397100629935 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9FACCBC51E55397100629935;
+			remoteInfo = AliDragMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9FACCBC61E55397100629935 /* AliDragMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AliDragMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACCBC91E55397100629935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9FACCBCB1E55397100629935 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9FACCBCE1E55397100629935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9FACCBD01E55397100629935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9FACCBD31E55397100629935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9FACCBD51E55397100629935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FACCBDA1E55397100629935 /* AliDragMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliDragMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACCBDE1E55397100629935 /* AliDragMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliDragMenuTests.swift; sourceTree = "<group>"; };
+		9FACCBE01E55397100629935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FACCBE51E55397100629935 /* AliDragMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AliDragMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FACCBE91E55397100629935 /* AliDragMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliDragMenuUITests.swift; sourceTree = "<group>"; };
+		9FACCBEB1E55397100629935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FACCBF71E553D3800629935 /* NumberCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FACCBF81E553D3800629935 /* NumberCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumberCollectionViewCell.xib; sourceTree = "<group>"; };
+		9FACCBFB1E5559AB00629935 /* MenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		9FACCBFD1E555B9300629935 /* IconAndTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconAndTitleView.swift; sourceTree = "<group>"; };
+		9FACCBFF1E555B9E00629935 /* IconAndTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconAndTitleView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9FACCBC31E55397100629935 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FACCBD71E55397100629935 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FACCBE21E55397100629935 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9FACCBBD1E55397100629935 = {
+			isa = PBXGroup;
+			children = (
+				9FACCBC81E55397100629935 /* AliDragMenu */,
+				9FACCBDD1E55397100629935 /* AliDragMenuTests */,
+				9FACCBE81E55397100629935 /* AliDragMenuUITests */,
+				9FACCBC71E55397100629935 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9FACCBC71E55397100629935 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9FACCBC61E55397100629935 /* AliDragMenu.app */,
+				9FACCBDA1E55397100629935 /* AliDragMenuTests.xctest */,
+				9FACCBE51E55397100629935 /* AliDragMenuUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9FACCBC81E55397100629935 /* AliDragMenu */ = {
+			isa = PBXGroup;
+			children = (
+				9FACCBC91E55397100629935 /* AppDelegate.swift */,
+				9FACCBCB1E55397100629935 /* ViewController.swift */,
+				9FACCBCD1E55397100629935 /* Main.storyboard */,
+				9FACCBD01E55397100629935 /* Assets.xcassets */,
+				9FACCBD21E55397100629935 /* LaunchScreen.storyboard */,
+				9FACCBD51E55397100629935 /* Info.plist */,
+				9FACCBF71E553D3800629935 /* NumberCollectionViewCell.swift */,
+				9FACCBF81E553D3800629935 /* NumberCollectionViewCell.xib */,
+				9FACCBFB1E5559AB00629935 /* MenuView.swift */,
+				9FACCBFD1E555B9300629935 /* IconAndTitleView.swift */,
+				9FACCBFF1E555B9E00629935 /* IconAndTitleView.xib */,
+			);
+			path = AliDragMenu;
+			sourceTree = "<group>";
+		};
+		9FACCBDD1E55397100629935 /* AliDragMenuTests */ = {
+			isa = PBXGroup;
+			children = (
+				9FACCBDE1E55397100629935 /* AliDragMenuTests.swift */,
+				9FACCBE01E55397100629935 /* Info.plist */,
+			);
+			path = AliDragMenuTests;
+			sourceTree = "<group>";
+		};
+		9FACCBE81E55397100629935 /* AliDragMenuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9FACCBE91E55397100629935 /* AliDragMenuUITests.swift */,
+				9FACCBEB1E55397100629935 /* Info.plist */,
+			);
+			path = AliDragMenuUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9FACCBC51E55397100629935 /* AliDragMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FACCBEE1E55397100629935 /* Build configuration list for PBXNativeTarget "AliDragMenu" */;
+			buildPhases = (
+				9FACCBC21E55397100629935 /* Sources */,
+				9FACCBC31E55397100629935 /* Frameworks */,
+				9FACCBC41E55397100629935 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AliDragMenu;
+			productName = AliDragMenu;
+			productReference = 9FACCBC61E55397100629935 /* AliDragMenu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9FACCBD91E55397100629935 /* AliDragMenuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FACCBF11E55397100629935 /* Build configuration list for PBXNativeTarget "AliDragMenuTests" */;
+			buildPhases = (
+				9FACCBD61E55397100629935 /* Sources */,
+				9FACCBD71E55397100629935 /* Frameworks */,
+				9FACCBD81E55397100629935 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FACCBDC1E55397100629935 /* PBXTargetDependency */,
+			);
+			name = AliDragMenuTests;
+			productName = AliDragMenuTests;
+			productReference = 9FACCBDA1E55397100629935 /* AliDragMenuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9FACCBE41E55397100629935 /* AliDragMenuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FACCBF41E55397100629935 /* Build configuration list for PBXNativeTarget "AliDragMenuUITests" */;
+			buildPhases = (
+				9FACCBE11E55397100629935 /* Sources */,
+				9FACCBE21E55397100629935 /* Frameworks */,
+				9FACCBE31E55397100629935 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9FACCBE71E55397100629935 /* PBXTargetDependency */,
+			);
+			name = AliDragMenuUITests;
+			productName = AliDragMenuUITests;
+			productReference = 9FACCBE51E55397100629935 /* AliDragMenuUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9FACCBBE1E55397100629935 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = tton;
+				TargetAttributes = {
+					9FACCBC51E55397100629935 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7Z8PCGAPQ4;
+						ProvisioningStyle = Automatic;
+					};
+					9FACCBD91E55397100629935 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7Z8PCGAPQ4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9FACCBC51E55397100629935;
+					};
+					9FACCBE41E55397100629935 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 7Z8PCGAPQ4;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 9FACCBC51E55397100629935;
+					};
+				};
+			};
+			buildConfigurationList = 9FACCBC11E55397100629935 /* Build configuration list for PBXProject "AliDragMenu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9FACCBBD1E55397100629935;
+			productRefGroup = 9FACCBC71E55397100629935 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9FACCBC51E55397100629935 /* AliDragMenu */,
+				9FACCBD91E55397100629935 /* AliDragMenuTests */,
+				9FACCBE41E55397100629935 /* AliDragMenuUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FACCBC41E55397100629935 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACCBD41E55397100629935 /* LaunchScreen.storyboard in Resources */,
+				9FACCC001E555B9E00629935 /* IconAndTitleView.xib in Resources */,
+				9FACCBFA1E553D3800629935 /* NumberCollectionViewCell.xib in Resources */,
+				9FACCBD11E55397100629935 /* Assets.xcassets in Resources */,
+				9FACCBCF1E55397100629935 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FACCBD81E55397100629935 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FACCBE31E55397100629935 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9FACCBC21E55397100629935 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACCBFE1E555B9300629935 /* IconAndTitleView.swift in Sources */,
+				9FACCBCC1E55397100629935 /* ViewController.swift in Sources */,
+				9FACCBFC1E5559AB00629935 /* MenuView.swift in Sources */,
+				9FACCBF91E553D3800629935 /* NumberCollectionViewCell.swift in Sources */,
+				9FACCBCA1E55397100629935 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FACCBD61E55397100629935 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACCBDF1E55397100629935 /* AliDragMenuTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FACCBE11E55397100629935 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FACCBEA1E55397100629935 /* AliDragMenuUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9FACCBDC1E55397100629935 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FACCBC51E55397100629935 /* AliDragMenu */;
+			targetProxy = 9FACCBDB1E55397100629935 /* PBXContainerItemProxy */;
+		};
+		9FACCBE71E55397100629935 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9FACCBC51E55397100629935 /* AliDragMenu */;
+			targetProxy = 9FACCBE61E55397100629935 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9FACCBCD1E55397100629935 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FACCBCE1E55397100629935 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9FACCBD21E55397100629935 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9FACCBD31E55397100629935 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9FACCBEC1E55397100629935 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9FACCBED1E55397100629935 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9FACCBEF1E55397100629935 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7Z8PCGAPQ4;
+				INFOPLIST_FILE = AliDragMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tton.AliDragMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9FACCBF01E55397100629935 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7Z8PCGAPQ4;
+				INFOPLIST_FILE = AliDragMenu/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tton.AliDragMenu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		9FACCBF21E55397100629935 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7Z8PCGAPQ4;
+				INFOPLIST_FILE = AliDragMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tton.AliDragMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AliDragMenu.app/AliDragMenu";
+			};
+			name = Debug;
+		};
+		9FACCBF31E55397100629935 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 7Z8PCGAPQ4;
+				INFOPLIST_FILE = AliDragMenuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tton.AliDragMenuTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AliDragMenu.app/AliDragMenu";
+			};
+			name = Release;
+		};
+		9FACCBF51E55397100629935 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7Z8PCGAPQ4;
+				INFOPLIST_FILE = AliDragMenuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tton.AliDragMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = AliDragMenu;
+			};
+			name = Debug;
+		};
+		9FACCBF61E55397100629935 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 7Z8PCGAPQ4;
+				INFOPLIST_FILE = AliDragMenuUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tton.AliDragMenuUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = AliDragMenu;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9FACCBC11E55397100629935 /* Build configuration list for PBXProject "AliDragMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FACCBEC1E55397100629935 /* Debug */,
+				9FACCBED1E55397100629935 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FACCBEE1E55397100629935 /* Build configuration list for PBXNativeTarget "AliDragMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FACCBEF1E55397100629935 /* Debug */,
+				9FACCBF01E55397100629935 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9FACCBF11E55397100629935 /* Build configuration list for PBXNativeTarget "AliDragMenuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FACCBF21E55397100629935 /* Debug */,
+				9FACCBF31E55397100629935 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9FACCBF41E55397100629935 /* Build configuration list for PBXNativeTarget "AliDragMenuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9FACCBF51E55397100629935 /* Debug */,
+				9FACCBF61E55397100629935 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9FACCBBE1E55397100629935 /* Project object */;
+}
