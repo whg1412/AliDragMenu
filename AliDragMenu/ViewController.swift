@@ -22,8 +22,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = false
-        let leftBar = UIBarButtonItem.init(title: "添加", style: .done, target: self, action: #selector(clickLeftBarButton))
-        self.navigationItem.leftBarButtonItem = leftBar
         
         let rightBarbutton = UIBarButtonItem.init(title: "编辑", style: .done, target: self, action: #selector(clickRightBarButton))
         self.navigationItem.rightBarButtonItem = rightBarbutton
@@ -66,11 +64,6 @@ class ViewController: UIViewController {
         self.scrollView?.addSubview(menuViewOne!)
     }
     
-    func clickLeftBarButton() {
-//        menuView?.viewsArr?.append("\((menuView?.viewsArr?.count)!+1)")
-//        menuViewOne?.compareArr = menuView?.viewsArr
-    }
-    
     func clickRightBarButton() {
         if self.navigationItem.rightBarButtonItem?.title == "编辑" {
             menuView?.ifShowEditButton = true
@@ -97,21 +90,46 @@ class ViewController: UIViewController {
 extension ViewController:MenuViewDelegate {
     func updateDelegateFrame() {
         
-        menuViewOne?.frame = CGRect.init(x: 0, y: (menuView?.frame.origin.y)!+(menuView?.frame.size.height)!+20, width: self.view.frame.size.width, height: (menuViewOne?.frame.size.height)!)
-        
-        if let height = menuViewOne?.frame.size.height {
-            self.scrollView?.contentSize = CGSize.init(width: self.view.frame.size.width, height: (menuViewOne?.frame.origin.y)!+height)
+        UIView.animate(withDuration: 0.3, animations: { 
+            self.menuViewOne?.frame = CGRect.init(x: 0, y: (self.menuView?.frame.origin.y)!+(self.menuView?.frame.size.height)!+20, width: self.view.frame.size.width, height: (self.menuViewOne?.frame.size.height)!)
+            
+            if let height = self.menuViewOne?.frame.size.height {
+                self.scrollView?.contentSize = CGSize.init(width: self.view.frame.size.width, height: (self.menuViewOne?.frame.origin.y)!+height)
+            }
+            
+            self.menuViewOne?.compareArr = self.menuView?.viewsArr
+        }) { (bool) in
+            
         }
         
-        print(menuView?.viewsArr)
-        
-        menuViewOne?.compareArr = menuView?.viewsArr
+
         
         
     }
     
-    func addTitleToViewArrInDelegate(title:String) {
-        menuView?.viewsArr?.append(title)
+    func addTitleToViewArrInDelegate(iconView:IconAndTitleView) {
+        self.menuView?.viewsArr?.append(iconView.titleLabel.text!)
+        let snapView = iconView.snapshotView(afterScreenUpdates: false)
+        snapView?.alpha = 0.8
+        
+        
+        let viewPoint = menuViewOne?.convert(iconView.center, to: self.view)
+        snapView?.center = viewPoint!
+        self.view.addSubview(snapView!)
+        
+        let newCenter = menuView?.convert((menuView?.lastNextCenter)!, to: self.view)
+        
+        UIView.animate(withDuration: 0.3, animations: { 
+            snapView?.center = newCenter!
+            snapView?.alpha = 0
+        }) { (bool) in
+            snapView?.removeFromSuperview()
+            
+        }
+        
+        
+        
+        
         
         menuViewOne?.compareArr = menuView?.viewsArr
     }

@@ -16,12 +16,12 @@ enum TouchState {
 
 protocol MenuViewDelegate {
     func updateDelegateFrame()
-    func addTitleToViewArrInDelegate(title:String)
+    func addTitleToViewArrInDelegate(iconView:IconAndTitleView)
 }
 
 extension MenuView:IconAndTitleViewDelegate {
     func clickEditButtonOnIconInDelegate(iconView: IconAndTitleView) {
-        self.delegate?.addTitleToViewArrInDelegate(title: iconView.titleLabel.text!)
+        self.delegate?.addTitleToViewArrInDelegate(iconView:iconView)
     }
     
     func clickDeleteButtonOnIConInDelegate(iconView: IconAndTitleView) {
@@ -41,13 +41,20 @@ extension MenuView:IconAndTitleViewDelegate {
             nextIconView.tag -= 1
             buttonArr[i-1] = nextIconView
         }
+        
+        
         buttonArr.removeLast()
-        iconView.removeFromSuperview()
-        let maxHeight:CGFloat = CGFloat((buttonArr.count-1)/4)
+        UIView.animate(withDuration: 0.3, animations: {
+            iconView.transform = CGAffineTransform.init(scaleX: 0.05, y: 0.05)
+        }) { (bool) in
+            iconView.removeFromSuperview()
+            let maxHeight:CGFloat = CGFloat((self.buttonArr.count-1)/4)
+            
+            self.frame = CGRect.init(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: (maxHeight)*self.YGap+maxHeight*(self.viewHeight)+40+self.viewHeight+20)
+            
+            self.delegate?.updateDelegateFrame()
+        }
         
-        self.frame = CGRect.init(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: (maxHeight)*YGap+maxHeight*(viewHeight)+40+viewHeight+20)
-        
-        self.delegate?.updateDelegateFrame()
         
     }
 }
@@ -68,8 +75,17 @@ class MenuView: UIView {
     var pressButtonTag:Int?
     
     var ifCanDrag = true
-    
     var iconBeginState:IconViewState = .DEL
+    
+    var lastNextCenter:CGPoint? {
+        get {
+            let maxHeight:CGFloat = CGFloat((self.buttonArr.count-1)/4)
+            let maxYu = CGFloat((self.buttonArr.count-1)%4)
+            
+            //iconAndTitle.frame = CGRect.init(x: XGap*maxYu+XGap+viewWidth*maxYu, y: (maxHeight)*YGap+maxHeight*(viewHeight)+40, width: viewWidth, height: viewHeight)
+            return CGPoint.init(x: XGap*maxYu+XGap+viewWidth*maxYu+(viewWidth)/2, y: (maxHeight)*YGap+maxHeight*(viewHeight)+40+viewHeight/2)
+        }
+    }
     
     
     //比较数组
@@ -155,8 +171,19 @@ class MenuView: UIView {
                             let longGester = UILongPressGestureRecognizer.init(target: self, action: #selector(handleLongPress(gester:)))
                             iconAndTitle.addGestureRecognizer(longGester)
                         }
-                        self.buttonArr.append(iconAndTitle)
+                        
                         self.addSubview(iconAndTitle)
+                        self.buttonArr.append(iconAndTitle)
+                        iconAndTitle.transform = CGAffineTransform.init(scaleX: 0.05, y: 0.05)
+                        UIView.animate(withDuration: 0.3, animations: {
+                            
+                            iconAndTitle.transform = CGAffineTransform.init(scaleX: 1, y: 1)
+                            
+                        }, completion: { (bool) in
+                            
+                        })
+                        
+                        
                     }
                     
                     
