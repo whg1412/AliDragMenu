@@ -20,8 +20,10 @@ enum IconViewState {
 }
 
 class IconAndTitleView: UIView {
-    
-    var delegate:IconAndTitleViewDelegate?
+    deinit {
+        print("IconAndTitleView被释放")
+    }
+    weak var delegate:IconAndTitleViewDelegate?
 
     var editState:IconViewState = .DEL {
         willSet {

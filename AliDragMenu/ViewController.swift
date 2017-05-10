@@ -39,10 +39,6 @@ class ViewController: UIViewController {
         self.setupMenuViewOne()
         
         self.scrollView?.addSubview(menuView!)
-        
-        self.view.bringSubview(toFront: menuView!)
-        
-
     }
     
     func setupScrollView() {

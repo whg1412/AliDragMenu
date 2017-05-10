@@ -7,28 +7,39 @@
 //
 
 import UIKit
-
+//MARK:iconView状态的枚举,用来增加提示动画
 enum TouchState {
     case UNTOUCHE
     case SUSPEND
     case MOVE
 }
 
+//MARK:menuView代理方法
 protocol MenuViewDelegate {
     func updateDelegateFrame()
     func addTitleToViewArrInDelegate(iconView:IconAndTitleView)
 }
 
+
+//MARK:iconAndTitleView代理
 extension MenuView:IconAndTitleViewDelegate {
+    //TODO:点击添加
     func clickEditButtonOnIconInDelegate(iconView: IconAndTitleView) {
         self.delegate?.addTitleToViewArrInDelegate(iconView:iconView)
     }
     
+    //TODO:点击删除
     func clickDeleteButtonOnIConInDelegate(iconView: IconAndTitleView) {
+        
+        //1.移除被删除iconView的标题,删除后自动执行viewArr的willSet方法
         viewsArr?.remove(at: (viewsArr?.index(where: { (element) -> Bool in
-            element == iconView.titleLabel.text!
+            return element == iconView.titleLabel.text!
         }))!)
+        
+        //2.记录被删除iconView的中心位置
         var preCenter = iconView.center
+        
+        //3.遍历iconView的数组,从被删除的iconView开始,依次前置
         var currentCenter:CGPoint?
         for i in iconView.tag-1000+1..<buttonArr.count{
             let nextIconView = buttonArr[i]
@@ -42,8 +53,10 @@ extension MenuView:IconAndTitleViewDelegate {
             buttonArr[i-1] = nextIconView
         }
         
-        
+        //4.移除数组中被删除的iconView
         buttonArr.removeLast()
+        
+        //5.删除动画,更新控件的frame,并通知代理更新frame
         UIView.animate(withDuration: 0.3, animations: {
             iconView.transform = CGAffineTransform.init(scaleX: 0.05, y: 0.05)
         }) { (bool) in
@@ -59,36 +72,24 @@ extension MenuView:IconAndTitleViewDelegate {
     }
 }
 
+
+
 class MenuView: UIView {
-    var titleLabel:UILabel!
-    var XGap:CGFloat = 20
-    var YGap:CGFloat = 15
-    var viewWidth:CGFloat = 80
+    deinit {
+        print("MenuView被释放")
+    }
     
-    
-    var viewHeight:CGFloat = 0
-    var delegate:MenuViewDelegate?
-    var buttonArr = Array<UIView>.init()
-    
-    var pressButtonCenter:CGPoint?
-    var startPos:CGPoint?
-    var pressButtonTag:Int?
-    
-    var ifCanDrag = true
-    var iconBeginState:IconViewState = .DEL
-    
+    //TODO:获取最后一个视图的下一个位置
     var lastNextCenter:CGPoint? {
         get {
             let maxHeight:CGFloat = CGFloat((self.buttonArr.count-1)/4)
             let maxYu = CGFloat((self.buttonArr.count-1)%4)
-            
-            //iconAndTitle.frame = CGRect.init(x: XGap*maxYu+XGap+viewWidth*maxYu, y: (maxHeight)*YGap+maxHeight*(viewHeight)+40, width: viewWidth, height: viewHeight)
             return CGPoint.init(x: XGap*maxYu+XGap+viewWidth*maxYu+(viewWidth)/2, y: (maxHeight)*YGap+maxHeight*(viewHeight)+40+viewHeight/2)
         }
     }
     
     
-    //比较数组
+    //TODO:比较数组,用于判断显示添加还是删除
     var compareArr:Array<String>? {
         willSet {
             for view in buttonArr {
@@ -112,13 +113,13 @@ class MenuView: UIView {
     }
     
     
+    //TODO:初始化视图的数组
     var viewsArr:Array<String>? {
         willSet {
             let maxHeight = CGFloat(((newValue?.count)!-1)/4)
             let maxYu = CGFloat(((newValue?.count)!-1)%4)
             let lastStr = newValue?.last
             
-            print(newValue?.count)
             
             //只在数组初始化或增加数组的时候执行
             if let newValueCount = newValue?.count{
@@ -194,10 +195,10 @@ class MenuView: UIView {
                 }
             }
             
-
             
             
-
+            
+            
         }
     }
     
@@ -213,7 +214,7 @@ class MenuView: UIView {
                     iconView?.editButton.isHidden = false
                 }
             }
-            //结束编辑
+                //结束编辑
             else{
                 for i in 0..<buttonArr.count {
                     let iconView = buttonArr[i] as? IconAndTitleView
@@ -224,6 +225,23 @@ class MenuView: UIView {
         }
     }
     
+    var titleLabel:UILabel!
+    var XGap:CGFloat = 20
+    var YGap:CGFloat = 15
+    var viewWidth:CGFloat = 80
+    
+    
+    var viewHeight:CGFloat = 0
+    var delegate:MenuViewDelegate?
+    var buttonArr = Array<UIView>.init()
+    
+    var pressButtonCenter:CGPoint?
+    var startPos:CGPoint?
+    var pressButtonTag:Int?
+    
+    var ifCanDrag = true
+    var iconBeginState:IconViewState = .DEL
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.white
